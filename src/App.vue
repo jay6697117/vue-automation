@@ -8,16 +8,16 @@
 export default {
   provide() {
     return {
-      reload: this.reload,
+      reload: this.reload
     };
   },
   data() {
     return {
-      isRouterAlive: true,
+      isRouterAlive: true
     };
   },
   watch: {
-    $route: "routeChange",
+    $route: 'routeChange'
   },
   methods: {
     reload() {
@@ -28,14 +28,12 @@ export default {
       if (newVal.name == oldVal.name) {
         this.reload();
       }
-    },
+    }
   },
   metaInfo: {
-    titleTemplate: (title) => {
-      return title
-        ? `${title} - ${process.env.VUE_APP_TITLE}`
-        : process.env.VUE_APP_TITLE;
-    },
-  },
+    titleTemplate: title => {
+      return title ? `${title} - ${process.env.VUE_APP_TITLE}` : process.env.VUE_APP_TITLE;
+    }
+  }
 };
 </script>
